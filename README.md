@@ -2,7 +2,7 @@
 
 _Elegant and reliable state management_
 
-This is the companion repository to my [Introduction to Redux with TypeScript]() presentation.
+This is the companion repository to my [Introduction to Redux with TypeScript](https://speakerdeck.com/giancosta86/introduction-to-redux-with-typescript) presentation.
 
 In particular, it contains:
 
