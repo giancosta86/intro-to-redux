@@ -1,0 +1,49 @@
+{
+  "name": "intro-to-redux",
+  "version": "1.0.0",
+  "description": "Introduction to Redux with TypeScript",
+  "private": true,
+  "scripts": {
+    "core-basic": "ts-node src/core/basic",
+    "core-extended": "ts-node src/core/extended",
+    "merry-client": "ts-node src/merry-dispatcher-client",
+    "toolkit-slicing": "ts-node src/toolkit/slicing",
+    "toolkit-async": "ts-node src/toolkit/async",
+    "test": "jest --silent --verbose",
+    "build-slides": "npx @marp-team/marp-cli slides/intro-to-redux.md --allow-local-files --pdf"
+  },
+  "keywords": [
+    "Redux",
+    "TypeScript",
+    "introduction",
+    "state management",
+    "Redux Toolkit",
+    "Redux Thunk",
+    "asynchronous",
+    "React",
+    "functional"
+  ],
+  "author": {
+    "name": "Gianluca Costa",
+    "url": "https://gianlucacosta.info/",
+    "email": "gianluca@gianlucacosta.info"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@marp-team/marp-cli": "^0.22.0",
+    "@types/jest": "^26.0.14",
+    "@types/redux": "^3.6.0",
+    "@types/redux-logger": "^3.0.8",
+    "jest": "^26.5.3",
+    "prettier": "^2.1.2",
+    "ts-jest": "^26.4.1",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.4.0",
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0"
+  }
+}
