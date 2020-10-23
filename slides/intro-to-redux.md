@@ -9,7 +9,7 @@ section {
   justify-content: flex-start;
   background-image: url("./PurpleYoga.jpg");
   background-size: 200% 110%;
-  color: indigo;
+  color: #350557;
 }
 
 h1,
@@ -18,7 +18,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: indigo;
+  color: #350557;
 }
 
 section.title {
@@ -42,14 +42,14 @@ section.title h3 {
 }
 
 section.title:after {
-  color: indigo;
+  color: #350557;
 }
 
 blockquote {
   quotes: "«" "»" "«" "»";
   border: none;
   text-align: center;
-  color: rebeccapurple;
+  color: #350557;
   margin-bottom: 1em;
 }
 
@@ -74,8 +74,8 @@ pre {
 }
 
 section:after {
-  color: indigo;
-  font-weight: bold;  
+  color: #350557;
+  font-weight: bold;
 }
 
 section.title:after {
@@ -96,7 +96,7 @@ section:not(.title) img {
 }
 
 section.gitHub {
-  display: flex;    
+  display: flex;
 }
 
 section.gitHub p {
@@ -109,7 +109,7 @@ section.gitHub p {
 a,
   a:active,
   a:visited {
-    color: darkslateblue;
+    color: #350557;
     font-weight: bold;
 
     text-decoration: underline;
@@ -122,7 +122,7 @@ a,
 <style scoped>
   footer {
     display: block;
-    color: indigo;
+    color: #350557;
     font-style: italic;
   }
 </style>
@@ -221,7 +221,7 @@ The core idea is a **single, centralized store** containing the _global state_:
 
 img {
   border: none;
-  padding: 0;  
+  padding: 0;
 }
 </style>
 
@@ -481,6 +481,12 @@ const rootReducer = combineReducers({
 ---
 
 # Understanding reducer combination
+
+<style scoped>
+p {
+  margin: 0.2em;
+}
+</style>
 
 Whenever a compound reducer is called, the following logical steps occur:
 
