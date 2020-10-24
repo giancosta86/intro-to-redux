@@ -1169,15 +1169,11 @@ General advice also apply - for example, _in reducers it is more efficient to re
 
 # Global takeaways
 
+- **Do you really need Redux?** Just like any other software component, _you should adopt it in scenarios where the benefits outweigh the drawbacks_
+
 - Use **createSlice()** to _create the action creators and the reducers_ for each slice of the domain: this will make you especially rely on **PayloadAction<T>**
 
-- Call **configureStore()** to _create the store_ and also:
-
-  - _combine multiple reducers_ into the _root reducer_
-
-  - apply (default) middleware
-
-  - (auto-)configure Redux DevTools
+- Call **configureStore()** to _create the store_ with default middleware and DevTools
 
 - Invoke the _store methods_ - especially **dispatch()** and **getState()**
 
@@ -1205,17 +1201,25 @@ _Redux is not opinionated_ in terms of directory layout, thus different choices 
 
 # Further references
 
-- [Redux - Official website](https://redux.js.org/)
+<style scoped>
+li {
+  line-height: 1.2em;
+}
+</style>
 
-- [Redux - Style guide](https://redux.js.org/style-guide/style-guide)
+- [Redux - Official website](https://redux.js.org/)
 
 - [Redux Toolkit](https://redux-toolkit.js.org/)
 
 - [Redux Thunk](https://github.com/reduxjs/redux-thunk)
 
-- [Redux Saga](https://redux-saga.js.org/) - a different, _generator-based_ approach to async operations
+- [Redux Saga](https://redux-saga.js.org/) - a _generator-based_ approach to async operations
 
 - [React Redux](https://react-redux.js.org/)
+
+- [Redux - Style guide](https://redux.js.org/style-guide/style-guide)
+
+- [Middleware evolution](https://redux.js.org/advanced/middleware) - step-by-step architectural explanation
 
 - [React Redux sample app](https://un8my.csb.app/)
 
