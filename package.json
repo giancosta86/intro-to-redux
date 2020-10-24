@@ -10,7 +10,7 @@
     "toolkit-slicing": "ts-node src/toolkit/slicing",
     "toolkit-async": "ts-node src/toolkit/async",
     "test": "jest --silent --verbose",
-    "build-slides": "npx @marp-team/marp-cli slides/intro-to-redux.md --allow-local-files --pdf"
+    "build-slides": "npx @marp-team/marp-cli slides/intro-to-redux.md --allow-local-files --pdf && chmod 400 slides/*.pdf"
   },
   "keywords": [
     "Redux",
