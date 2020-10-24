@@ -188,7 +188,7 @@ The main parts of this presentation can be briefly summarized as follows:
 
 - _Minimalist library_ providing just a core implementation
 
-- Redux _does not depend on a specific major library or framework_, such as React or Angular: it can be referenced by _any JavaScript project_, potentially even simple CLI apps
+- Redux _does not depend on a specific major library or framework_, such as React or Angular: it can be referenced by _any JavaScript project_, including backend projects and potentially even command-line applications
 
 - The ecosystem provides _a wide variety of extensions_ and _developer tools_
 
