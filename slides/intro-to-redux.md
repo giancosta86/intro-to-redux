@@ -127,7 +127,7 @@ a,
   }
 </style>
 
-<!-- footer: "Latest update: 2020-10-23"  -->
+<!-- footer: "Latest update: 2020-10-24"  -->
 
 ### Gianluca Costa [:butterfly:](https://gianlucacosta.info/)
 
