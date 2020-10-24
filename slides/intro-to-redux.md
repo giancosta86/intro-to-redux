@@ -188,7 +188,7 @@ The main parts of this presentation can be briefly summarized as follows:
 
 - _Minimalist library_ providing just a core implementation
 
-- Redux _does not depend on a specific major library or framework_, such as React or Angular: it can be referenced by _any JavaScript project_, even simple CLI apps
+- Redux _does not depend on a specific major library or framework_, such as React or Angular: it can be referenced by _any JavaScript project_, potentially even simple CLI apps
 
 - The ecosystem provides _a wide variety of extensions_ and _developer tools_
 
@@ -893,10 +893,10 @@ export const bearReducer = bearSlice.reducer
 You can actually decouple the action creator and the reducer in a slice as well:
 
 ```typescript
-type BearCreatedPayload = {name: string, token: number}
+type AddBearPayload = {name: string, token: number}
 (...)
 reducers: {
-  bearAdded: {
+  addBear: {
     //This works just like prepare in createAction()
     prepare: (name: string) => {
       //As usual, you definitely mustn't specify the "type" field here
