@@ -15,13 +15,13 @@ In particular, it contains:
 Please, refer to the **scripts** section within **package.json**, then run:
 
 ```bash
-npm run <script name>
+yarn <script name>
 ```
 
 or:
 
 ```bash
-npm test
+yarn test
 ```
 
 to run all the tests.
