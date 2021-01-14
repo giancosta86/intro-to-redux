@@ -26,7 +26,21 @@ export function clearBears(): ClearBearsAction {
   }
 }
 
-export type BearsAction = AddBearAction | ClearBearsAction
+const FAIL_TO_ADD_BEAR = "bears/failToAdd"
+
+interface FailToAddBearAction {
+  type: typeof FAIL_TO_ADD_BEAR
+  name: string
+}
+
+export function failToAddBear(name: string): FailToAddBearAction {
+  return {
+    type: FAIL_TO_ADD_BEAR,
+    name
+  }
+}
+
+export type BearsAction = AddBearAction | ClearBearsAction | FailToAddBearAction
 
 export function bearReducer(
   state: ReadonlyArray<Bear> = [{ name: "Yogi" }],
@@ -38,6 +52,12 @@ export function bearReducer(
 
     case CLEAR_BEARS:
       return state.length ? [] : state
+
+    case FAIL_TO_ADD_BEAR:
+      //This is just a simulation: as a matter of fact,
+      //reducers should set dedicated state fields
+      //in lieu of throwing errors
+      throw new Error("Reducer error")
 
     default:
       return state

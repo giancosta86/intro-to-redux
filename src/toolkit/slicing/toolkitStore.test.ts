@@ -1,5 +1,5 @@
 import { createToolkitStore } from "./toolkitStore"
-import { addBear, clearBears } from "./slices/bears"
+import { addBear, clearBears, failToAddBear } from "./slices/bears"
 import { addRanger } from "./slices/rangers"
 import { Bear } from "../../model/Bear"
 import { Ranger } from "../../model/Ranger"
@@ -53,5 +53,12 @@ describe("Store created via Redux Toolkit and slices", () => {
       bears: [{ name: "Yogi" }],
       rangers: [{ name: "Smith", stars: 4.5 }]
     })
+  })
+
+  it("should throw the reducer's error on dispatch when the reducer fails", () => {
+    const store = createToolkitStore()
+
+    expect(() => store.dispatch(failToAddBear("Ciop"))).toThrow(TypeError)
+    expect(store.getState().bears).toEqual([{ name: "Yogi" }])
   })
 })

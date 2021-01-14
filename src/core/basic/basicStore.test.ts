@@ -1,6 +1,5 @@
 import { createBasicStore } from "./basicStore"
-import { addBear, clearBears } from "../actions/bears"
-import { Bear } from "../../model/Bear"
+import { addBear, clearBears, failToAddBear } from "../actions/bears"
 
 describe("Basic store via Redux core", () => {
   it("should have correct initial state", () => {
@@ -43,5 +42,15 @@ describe("Basic store via Redux core", () => {
     store.dispatch(clearBears())
 
     expect(notificationCount).toBe(3)
+  })
+
+  it("should throw the reducer's error on dispatch when the reducer fails", () => {
+    const store = createBasicStore()
+
+    expect(() => store.dispatch(failToAddBear("Bubu"))).toThrow(
+      new Error("Reducer error")
+    )
+
+    expect(store.getState()).toEqual([{ name: "Yogi" }])
   })
 })

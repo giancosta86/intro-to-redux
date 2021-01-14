@@ -127,7 +127,7 @@ a,
   }
 </style>
 
-<!-- footer: "Latest update: 2020-10-24"  -->
+<!-- footer: "Latest update: 2021-01-14"  -->
 
 ### Gianluca Costa [:butterfly:](https://gianlucacosta.info/)
 
@@ -452,6 +452,20 @@ state.myField = 90
 - **code safety**: no _unexpected state modifications_
 
 - **performances**: Redux is based on _shallow equality checking_
+
+---
+
+# Errors in reducers
+
+> By default, errors thrown within a reducer bubble up the call stack, thus terminating the computation induced by dispatch()
+
+**Should reducers contain try/catch?** _Most probably no_, because:
+
+- **syntax errors** - especially in _vanilla JS/ES_ - should emerge _as quickly as possible_
+
+- **domain errors** should be expressed via **dedicated state fields** in lieu of _throwing_
+
+Finally, the default behaviour can be arbitrarily customized by introducing **middleware** - a topic we are going to discuss in the next section.
 
 ---
 
