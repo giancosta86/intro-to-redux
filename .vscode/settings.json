@@ -1,0 +1,5 @@
+{
+  "markdown.marp.themes": ["src/styles/theme.css"],
+  "scss.lint.unknownAtRules": "ignore",
+  "css.lint.unknownAtRules": "ignore"
+}

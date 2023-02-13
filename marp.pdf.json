@@ -1,0 +1,9 @@
+{
+  "pdf": true,
+  "output": "dist/pdf/slides.pdf",
+  "html": true,
+  "theme": "src/styles/theme.css",
+  "allowLocalFiles": true,
+  "progress": false,
+  "pdfOutlines": true
+}

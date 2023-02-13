@@ -1,0 +1,37 @@
+@mixin page-numbers {
+  &:after {
+    @content;
+  }
+}
+
+@mixin no-page-numbers {
+  @include page-numbers {
+    display: none;
+  }
+}
+
+@mixin separator {
+  @include no-page-numbers;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: 125% 110%;
+  text-align: center;
+
+  h1 {
+    font-size: 3em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
+
+  h4 {
+    font-size: 1.4em;
+  }
+}

@@ -1,17 +1,7 @@
 {
   "name": "intro-to-redux",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Introduction to Redux with TypeScript",
-  "private": true,
-  "scripts": {
-    "core-basic": "ts-node src/core/basic",
-    "core-extended": "ts-node src/core/extended",
-    "merry-client": "ts-node src/merry-dispatcher-client",
-    "toolkit-slicing": "ts-node src/toolkit/slicing",
-    "toolkit-async": "ts-node src/toolkit/async",
-    "test": "jest --silent --verbose",
-    "build-slides": "npx @marp-team/marp-cli slides/intro-to-redux.md --allow-local-files --pdf && chmod 400 slides/*.pdf"
-  },
   "keywords": [
     "Redux",
     "TypeScript",
@@ -23,27 +13,62 @@
     "React",
     "functional"
   ],
+  "homepage": "https://speakerdeck.com/giancosta86/introduction-to-redux-with-typescript",
+  "license": "MIT",
   "author": {
     "name": "Gianluca Costa",
-    "url": "https://gianlucacosta.info/",
-    "email": "gianluca@gianlucacosta.info"
+    "email": "gianluca@gianlucacosta.info",
+    "url": "https://gianlucacosta.info/"
   },
-  "license": "Apache-2.0",
-  "devDependencies": {
-    "@marp-team/marp-cli": "^0.22.0",
-    "@types/jest": "^26.0.14",
-    "@types/redux": "^3.6.0",
-    "@types/redux-logger": "^3.0.8",
-    "jest": "^26.5.3",
-    "prettier": "^2.1.2",
-    "ts-jest": "^26.4.1",
-    "ts-node": "^9.0.0",
-    "typescript": "^4.0.3"
+  "repository": "giancosta86/intro-to-redux",
+  "scripts": {
+    "clean": "rimraf dist src/styles/theme.css",
+    "clean:all": "yarn clean && rimraf node_modules",
+    "format": "prettier --write .",
+    "check-format": "prettier --check .",
+    "lint": "eslint . --ext .js,.ts,.jsx,.tsx,.cjs,.mjs",
+    "build": "yarn build:css && yarn build:output",
+    "build:css": "sass src/styles/theme.scss src/styles/theme.css --no-source-map",
+    "build:output": "concurrently -r 'yarn build:pdf' 'yarn build:html'",
+    "build:pdf": "marp src/slides.md -c marp.pdf.json",
+    "build:html": "concurrently -r 'yarn create-slides:html' 'yarn copy-images:html'",
+    "create-slides:html": "marp src/slides.md -c marp.html.json",
+    "copy-images:html": "copyfiles -u 1 src/**/*.{png,jpg,jpeg} dist/html",
+    "test": "jest --silent --verbose --detectOpenHandles",
+    "core-basic": "ts-node src/examples/core/basic",
+    "core-extended": "ts-node src/examples/core/extended",
+    "merry-client": "ts-node src/examples/merry-dispatcher-client",
+    "toolkit-slicing": "ts-node src/examples/toolkit/slicing",
+    "toolkit-async": "ts-node src/examples/toolkit/async"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.4.0",
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0"
-  }
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "^2.2.0",
+    "@swc/core": "^1.3.35",
+    "@swc/jest": "^0.2.24",
+    "@types/jest": "^29.4.0",
+    "@types/redux": "^3.6.0",
+    "@types/redux-logger": "^3.0.8",
+    "@typescript-eslint/eslint-plugin": "^5.51.0",
+    "@typescript-eslint/parser": "^5.51.0",
+    "concurrently": "^7.6.0",
+    "copyfiles": "^2.4.1",
+    "eslint": "^8.34.0",
+    "jest": "^29.4.2",
+    "jest-extended": "^3.2.3",
+    "prettier": "^2.8.1",
+    "rimraf": "^3.0.2",
+    "sass": "^1.56.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
+  },
+  "engines": {
+    "node": ">=16.19.0"
+  },
+  "private": true
 }

@@ -1,0 +1,61 @@
+@use "utils";
+
+:root {
+  @include utils.page-numbers {
+    font-weight: bold;
+    color: #350557;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ol,
+  ul,
+  li,
+  blockquote {
+    color: #350557;
+  }
+
+  a,
+  a:active,
+  a:visited {
+    color: #350557;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  footer {
+    display: none;
+  }
+
+  blockquote {
+    quotes: "«" "»" "«" "»";
+    border: none;
+    text-align: center;
+    margin-bottom: 1em;
+
+    p {
+      display: inline;
+      font-weight: bold;
+      font-size: 1.2em;
+      line-height: 1.25em;
+      vertical-align: middle;
+    }
+
+    &:before {
+      content: open-quote;
+    }
+
+    &:after {
+      content: close-quote;
+    }
+  }
+
+  pre {
+    background: papayawhip;
+  }
+}
