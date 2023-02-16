@@ -34,6 +34,7 @@
     "build:html": "concurrently -r 'yarn create-slides:html' 'yarn copy-images:html'",
     "create-slides:html": "marp src/slides.md -c marp.html.json",
     "copy-images:html": "copyfiles -u 1 src/**/*.{png,jpg,jpeg} dist/html",
+    "watch": "chokidar \"src/**/*.{md,scss,png,jpg,jpeg}\" --initial -d -c \"yarn build\"",
     "test": "jest --silent --verbose --detectOpenHandles",
     "core-basic": "ts-node src/examples/core/basic",
     "core-extended": "ts-node src/examples/core/extended",
@@ -48,7 +49,7 @@
     "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
-    "@marp-team/marp-cli": "^2.2.0",
+    "@marp-team/marp-cli": "^2.3.0",
     "@swc/core": "^1.3.35",
     "@swc/jest": "^0.2.24",
     "@types/jest": "^29.4.0",
@@ -56,6 +57,7 @@
     "@types/redux-logger": "^3.0.8",
     "@typescript-eslint/eslint-plugin": "^5.51.0",
     "@typescript-eslint/parser": "^5.51.0",
+    "chokidar-cli": "^3.0.0",
     "concurrently": "^7.6.0",
     "copyfiles": "^2.4.1",
     "eslint": "^8.34.0",
