@@ -1,6 +1,6 @@
 {
   "name": "intro-to-redux",
-  "description": "Introduction to Redux with TypeScript",
+  "description": "Elegantly handling state management in a full-stack architecture",
   "keywords": [
     "Redux",
     "TypeScript",

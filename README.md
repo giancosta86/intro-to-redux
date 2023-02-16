@@ -1,6 +1,6 @@
-# Introduction to Redux
+# Introduction to Redux - with TypeScript
 
-_Introduction to Redux with TypeScript_
+_Elegantly handling state management in a full-stack architecture_
 
 This project contains the source files of the presentation titled [Introduction to Redux](https://speakerdeck.com/giancosta86/introduction-to-redux-with-typescript) - as well as a complete set of Yarn-based scripts to handle its lifecycle **and** the _sample projects_ showcasing _Redux's elegance_ combined with _TypeScript's static type checking_.
 
