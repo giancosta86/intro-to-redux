@@ -2,6 +2,12 @@
 marp: true
 paginate: true
 theme: slides
+
+title: Introduction to Redux - with TypeScript
+description: Elegantly handling state management in a full-stack architecture
+author: Gianluca Costa
+keywords: Redux,TypeScript,introduction,state management,Redux Toolkit,Redux Thunk,asynchronous,React,functional
+url: https://speakerdeck.com/giancosta86/introduction-to-redux-with-typescript
 ---
 
 <!-- _class: title -->
